@@ -114,3 +114,10 @@ const businesses = [
   export const useBusiness = () => {
       return businesses.slice()
   }
+
+  export const NewYorkBusinesses = businesses.filter(bizObject => {
+      if (bizObject.addressStateCode === 'NY') {
+          return true
+      }
+      return false
+  })
