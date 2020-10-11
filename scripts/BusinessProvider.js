@@ -121,3 +121,14 @@ const businesses = [
       }
       return false
   })
+
+  export const getAgents = () => {
+    return businesses.map(busObject => {
+      const newObject = {
+        agent: `${busObject.purchasingAgent.nameFirst} ${busObject.purchasingAgent.nameLast}`,
+        companyName: `${busObject.companyName}`,
+        phoneWork: `${busObject.phoneWork}`
+      }
+      return newObject
+    }
+  )} 
