@@ -131,4 +131,8 @@ const businesses = [
       }
       return newObject
     }
-  )} 
+  )}
+  
+  export const findBusiness = (name) => {
+    return businesses.find(business => business.companyName === name)
+  }
